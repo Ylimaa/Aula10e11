@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100vh;
+}
+
+body {
+    background: url(https://images.pexels.com/photos/10155555/pexels-photo-10155555.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940) no-repeat fixed;
+    font-family: 'Trebuchet MS',  Arial;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 35px;
+    letter-spacing: 1px;
+    margin: 110px 0;
+    color: #fff;
+    transform: scale(1.7);
+}
+
+form {
+    margin: 100px 0;
+    background-color: rgba(16, 17, 17, 0.459);
+    padding: 35px 30px;
+    border-radius: 5px;
+    overflow: hidden;
+    animation: aparecer 1500ms;
+    transform: scale(1.7);
+}
+
+form .inserir {
+    margin-bottom: 20px;
+    animation: campos 1s;
+}
+
+form .inserir label{
+    font-size: 15px;
+    color: #fff;
+}
+
+form .inserir input {
+    width: 100%;
+    display: block;
+    margin-top: 8px;
+    padding: 7px;
+    font-size: 10px;
+    color: #fff;
+    border-radius: 5px;
+    border: 1px solid #000000;
+    outline-color: #191920;
+    background: rgba(16, 17, 17, 0.753);
+}
+
+form .btn-login {
+    display: block;
+    min-width: 120px;
+    border: none;
+    background-color: #191920;
+    color: #fff;
+    border-radius: 25px;
+    margin: auto;
+    padding: 7px;
+}
+
+.btn-login:hover{
+    background-color: rgba(132, 216, 236, 0.5);
+    color: #fafffa;
+    transition: 1s ease-in;
+}
+
+.esconder-form {
+animation: esconder 1s forwards;
+}
+
+/* Animação para o login aparecer suavemente e de maneira crescente */ 
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: scale(0.2);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1.7);
+    }
+}
+
+/* Campos serem apresentados da esquerda para a direita*/
+@keyframes campos {
+    from {
+        transform: translateX(-35%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}
+
+/* Ação do botão para desaparecer o form*/
+@keyframes esconder {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
